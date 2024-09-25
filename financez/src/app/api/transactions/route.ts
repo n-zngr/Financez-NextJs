@@ -23,7 +23,14 @@ export async function POST(request: Request) {
         const result = await db.collection<Transaction>('transactions').insertOne({
             ...body,
             userId: new ObjectId(body.userId),
-            date: new Date(body.date)
+            title: body.title,
+            description: body.description,
+            amount: body.amount,
+            type: body.type,
+            category: body.category,
+            date: new Date(body.date),
+            createdAt: new Date(),
+            lastEdited: new Date()
         });
         return NextResponse.json(result);
     } catch (e) {

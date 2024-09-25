@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import clientPromise from '@/lib/mongodb';
 import { User } from '@/lib/types';
+import { ObjectId } from 'mongodb';
 
 export async function GET() {
     try {
