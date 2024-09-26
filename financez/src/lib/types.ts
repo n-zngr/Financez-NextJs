@@ -6,7 +6,7 @@ export interface User {
     email: string;
     password: string;
     country: {
-        country: string;
+        name: string;
         code: string;
     }
     createdAt: Date;
