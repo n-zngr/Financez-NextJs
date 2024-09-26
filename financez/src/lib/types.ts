@@ -5,7 +5,10 @@ export interface User {
     username: string;
     email: string;
     password: string;
-    country: string;
+    country: {
+        country: string;
+        code: string;
+    }
     createdAt: Date;
 }
 

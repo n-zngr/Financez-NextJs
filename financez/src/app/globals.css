@@ -29,8 +29,14 @@ body {
 
 a{
   color: red;
+  cursor: not-allowed;
 }
 
-p, h1, h2, h3, h4, h5{
+p, h1, h2, h3, h4, h5, label{
   color: var(--white-100);
+}
+
+input{
+  outline: none;
+  background-color: transparent;
 }
