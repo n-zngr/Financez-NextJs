@@ -5,6 +5,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --white-100: #F9FBFD;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,4 +29,8 @@ body {
 
 a{
   color: red;
+}
+
+p, h1, h2, h3, h4, h5{
+  color: var(--white-100);
 }
