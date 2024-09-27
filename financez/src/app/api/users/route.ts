@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
 import clientPromise from '@/lib/mongodb';
 import { User } from '@/lib/types';
-import { ObjectId } from 'mongodb';
 
 export async function GET() {
     try {
@@ -20,11 +19,24 @@ export async function POST(request: Request) {
         const body = await request.json();
         const client = await clientPromise;
         const db = client.db('financez');
+        
+        const { name, email, password } = body;
+        // const country = { name: body.country.name, code: body.country.code };
+        const country = { name: 'unimplemented', code: 'test' };
+
+        if (!name) {
+            return NextResponse.json({ error: 'Full name is required'}, { status: 400 })
+        }
+
         const result = await db.collection<User>('users').insertOne({
-            ...body,
+            name,
+            email,
+            password,
+            country,
             createdAt: new Date()
         });
-        return NextResponse.json(result);
+        
+        return NextResponse.json({ id: result.insertedId });
     } catch (e) {
         console.error(e);
         return NextResponse.json({ error: 'Failed to create user' }, { status: 500 });
