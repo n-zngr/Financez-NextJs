@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import clientPromise from '@/lib/mongodb';
+import connectDb from '@/lib/mongodb';
 import { Transaction } from '@/lib/types';
 import { ObjectId } from 'mongodb';
 
 export async function GET() {
     try {
-        const client = await clientPromise;
+        const client = await connectDb();
         const db = client.db('financez');
         const transactions = await db.collection<Transaction>('transactions').find({}).toArray();
         return NextResponse.json(transactions);
@@ -18,7 +18,7 @@ export async function GET() {
 export async function POST(request: Request) {
     try {
         const body = await request.json();
-        const client = await clientPromise;
+        const client = await connectDb();
         const db = client.db('financez');
         const result = await db.collection<Transaction>('transactions').insertOne({
             ...body,
