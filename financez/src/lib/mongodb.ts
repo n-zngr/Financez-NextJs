@@ -18,11 +18,11 @@ async function connectDb() {
         const connection = await clientPromise;
         
         if (connection) {
-            console.log('Successfully connected to MongoDB');
+            console.log('DB connection established.');
         }
         return clientPromise;
     } catch (error) {
-        console.error('Failed to connect to MongoDB', error);
+        console.error('Failed to connect to database', error);
         throw new Error('MongoDB connection failed');
     }
 }
