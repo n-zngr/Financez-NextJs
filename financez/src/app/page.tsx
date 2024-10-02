@@ -3,7 +3,7 @@ export default function HomePage() {
         <div>
             <h1>Hello World</h1>
             <p>Hello</p>
-            <a href="/dashboard">To Dashboard page</a>
+            <a href="/dashboard" className="font-termina">To Dashboard page</a>
         </div>
     );
 }

@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        termina: ['var(--font-termina)'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
