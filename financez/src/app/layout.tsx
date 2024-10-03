@@ -3,6 +3,9 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { termina } from "@/lib/fonts/termina";
+import { ambroise } from "@/lib/fonts/ambroise";
+import { ambroise_firmin } from "@/lib/fonts/ambroise";
+import { ambroise_francois } from "@/lib/fonts/ambroise";
 import CursorDefault from "@/components/cursor/cursorDefault";
 
 const geistSans = localFont({
@@ -29,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${termina.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${termina.variable} ${ambroise.variable} ${ambroise_firmin.variable} ${ambroise_francois.variable} antialiased`}
       >
         {children}
         <CursorDefault />

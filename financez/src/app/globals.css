@@ -3,22 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --white-100: #F9FBFD;
+  --background: #000204;
+  --foreground: #FBFDFF;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000204;
+    --foreground: #FBFDFF;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Termina, Arial, Helvetica, sans-serif;
 }
 
 @layer base {
@@ -39,7 +38,7 @@ a{
 }
 
 p, h1, h2, h3, h4, h5, label{
-  color: var(--white-100);
+  color: var(--white-5);
 }
 
 input{
