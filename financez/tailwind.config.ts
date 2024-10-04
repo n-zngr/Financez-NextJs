@@ -14,6 +14,9 @@ const config: Config = {
         ambroise_francois: ['var(--font-ambroise_francois)'],
         ambroise_firmin: ['var(--font-ambroise_firmin)'],
       },
+      fontSize: {
+        '7_5xl': '5rem',
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
