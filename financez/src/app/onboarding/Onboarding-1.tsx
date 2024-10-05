@@ -1,8 +1,5 @@
 import { FC } from 'react';
-
-interface OnboardingProps {
-    onNext: () => void;
-}
+import { OnboardingProps } from '@/components/OnboardingLogic';
 
 const Onboarding1: FC<OnboardingProps> = ({ onNext }) => {
     // Landing Page

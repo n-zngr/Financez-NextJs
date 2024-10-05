@@ -8,6 +8,10 @@ import Onboarding1 from '@/app/onboarding/Onboarding-1';
 import Onboarding2 from '@/app/onboarding/Onboarding-2';
 import Onboarding3 from '@/app/onboarding/Onboarding-3';
 
+export interface OnboardingProps {
+    onNext: () => void;
+}
+
 const OnboardingLogic = () => {
     const [ currentPage, setCurrentPage ] = useState(1);
 
@@ -33,41 +37,7 @@ const OnboardingLogic = () => {
                 <Onboarding3 onNext={nextPage}/>
             </div>
         </div>
-    )
-}
+    );
+};
 
 export default OnboardingLogic;
-
-
-
-/*
-const OnboardingLogic = () => {
-
-    let page = 1;
-
-    const [ currentPage, setCurrentPage ] = useState(page);
-
-    const router = useRouter();
-
-    const nextPage = () => {
-        setCurrentPage(page++);
-        console.log(page);
-    };
-
-    return (
-        <div className='relative h-screen w-screen overflow-hidden'>
-            <div className={`absolute inset-0 transition-transform duration-500 ease-in-out ${currentPage === 1 ? 'translate-x-0' : '-translate-x-full'}`}>
-                <Onboarding1 onNext={nextPage}/>
-            </div>
-            <div className={`absolute inset-0 transition-transform duration-500 ease-in-out ${currentPage === 2 ? 'translate-x-0' : '-translate-x-full'}`}>
-                <Onboarding2 onNext={nextPage}/>
-            </div>
-            <div className={`absolute inset-0 transition-transform duration-500 ease-in-out ${currentPage === 3 ? 'translate-x-0' : '-translate-x-full'}`}>
-                <Onboarding3/>
-            </div>
-        </div>
-    )
-}
-
-export default OnboardingLogic;
-*/

@@ -1,8 +1,5 @@
 import { FC } from 'react';
-
-interface OnboardingProps {
-    onNext: () => void;
-}
+import { OnboardingProps } from '@/components/OnboardingLogic';
 
 const Onboarding2: FC<OnboardingProps> = ({ onNext }) => {
     // Feature - Tracking
