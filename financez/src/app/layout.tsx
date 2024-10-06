@@ -6,7 +6,8 @@ import { termina } from "@/lib/fonts/termina";
 import { ambroise } from "@/lib/fonts/ambroise";
 import { ambroise_firmin } from "@/lib/fonts/ambroise";
 import { ambroise_francois } from "@/lib/fonts/ambroise";
-import CursorDefault from "@/components/cursor/default";
+
+import CursorLogic from "@/components/cursor/cursorLogic";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,7 +36,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${termina.variable} ${ambroise.variable} ${ambroise_firmin.variable} ${ambroise_francois.variable} antialiased`}
       >
         {children}
-        <CursorDefault/>
+        <CursorLogic/>
       </body>
     </html>
   );

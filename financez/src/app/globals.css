@@ -22,7 +22,11 @@ body {
 
 @layer base {
   body {
-    cursor: none;
+    cursor: none !important;
+  }
+
+  button, a{
+    cursor: none !important;
   }
 }
 
@@ -32,12 +36,7 @@ body {
   }
 }
 
-a{
-  color: red;
-  cursor: not-allowed;
-}
-
-p, h1, h2, h3, h4, h5, label{
+p, a, h1, h2, h3, h4, h5, label{
   color: var(--white-5);
 }
 
