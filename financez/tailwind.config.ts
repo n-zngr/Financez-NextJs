@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'noise': "url('/img/noise-pattern.png')",
+      },
       fontFamily: {
         termina: ['var(--font-termina)'],
         ambroise: ['var(--font-ambroise)'],
@@ -40,6 +43,13 @@ const config: Config = {
           3: '#EBEDEF',
           4: '#F3F5F7',
           5: '#FBFDFF',
+        },
+        gold: {
+          1: '#C49F27',
+          2: '#CCA72F',
+          3: '#D4AF37',
+          4: '#DCB73F',
+          5: '#E4BF47',
         },
       },
     },
