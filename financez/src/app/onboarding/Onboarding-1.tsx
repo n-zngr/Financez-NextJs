@@ -9,7 +9,7 @@ const Onboarding1: FC<OnboardingProps> = ({ onNext }) => {
                 <h1 className="font-ambroise font-demi text-7_5xl">Financez-vous</h1>
                 <h2 className="font-thin text-2xl pt-2">Finance yourself</h2>
             </div>
-            <div className="flex flex-col px-16 py-16 gap-y-16">
+            <div className="flex flex-col p-16 gap-y-16">
                 <p className="font-light text-gray-5 text-xl">Handle your finances with care. Effortlessly, and simple.</p>
                 <button onClick={onNext} className="flex border border-white-5 rounded-2xl p-4 text-base">
                     <p className="font-thin">Revolutionize your finances</p>
