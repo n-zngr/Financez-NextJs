@@ -9,7 +9,7 @@ Rebuilding a financing-app project with NextJs, originally created using NodeJs 
 - [Vercel](https://vercel.com/), Deployment
 - [Notion](https://notion.so/), Project Management
 
-<img src="https://skillicons.dev/icons?i=nextjs, ts, tailwind, mongodb, vercel, notion"/>
+<img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,mongodb,vercel,notion"/>
 
 ## Documentation
 Documentation of the project is not public, found on Notion. 
