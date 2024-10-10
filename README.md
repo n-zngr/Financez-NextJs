@@ -2,14 +2,15 @@
 Rebuilding a financing-app project with NextJs, originally created using NodeJs and EJS [Financez](https://github.com/DeltaGamingCH/FINANCEZ).
 
 ## Project Details
+
+<img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,mongodb,vercel,notion"/>
+
 - [NextJs](https://nextjs.org/), Framework
 - [TypeScript](https://www.typescriptlang.org/)
 - [TailwindCSS](https://tailwindcss.com/), Styling
 - [MongoDb](https://www.mongodb.com/), Database
 - [Vercel](https://vercel.com/), Deployment
 - [Notion](https://notion.so/), Project Management
-
-<img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,mongodb,vercel,notion"/>
 
 ## Documentation
 Documentation of the project is not public, found on Notion. 
