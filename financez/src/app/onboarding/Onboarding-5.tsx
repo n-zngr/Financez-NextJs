@@ -5,7 +5,7 @@ import Plans from '@/components/Plans/Plans';
 const Onboarding5: FC<OnboardingProps> = ({ onNext }) => {
     // Select your plan (Standard, Prestige)
     return (
-        <div className='flex flex-col justify-end min-h-screen'>
+        <div className='flex flex-col justify-end min-h-screen w-full'>
             <Plans onNext={onNext}/>
             <div className='px-16 text-white-5'>
                 <h1 className='font-ambroise font-demi text-7_5xl'>Select your plan</h1>

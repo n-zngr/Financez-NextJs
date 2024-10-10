@@ -8,6 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionDuration: {
+        '400': '400ms',
+        '600': '600ms',
+        '800': '800ms',
+      },
       backgroundImage: {
         'noise': "url('/img/noise-pattern.png')",
       },

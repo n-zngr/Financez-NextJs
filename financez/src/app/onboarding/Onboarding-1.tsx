@@ -4,7 +4,7 @@ import { OnboardingProps } from '@/components/OnboardingLogic';
 const Onboarding1: FC<OnboardingProps> = ({ onNext }) => {
     // Landing Page
     return (
-        <div className="flex flex-col justify-end min-h-screen">
+        <div className="flex flex-col justify-end min-h-screen w-full">
             <div className="px-16 text-white-5">
                 <h1 className="font-ambroise font-demi text-7_5xl">Financez-vous</h1>
                 <h2 className="font-thin text-2xl pt-2">Finance yourself</h2>

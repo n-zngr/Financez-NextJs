@@ -4,7 +4,7 @@ import { OnboardingProps } from '@/components/OnboardingLogic';
 const Onboarding4: FC<OnboardingProps> = ({ onNext }) => {
     // Select Account Type (Personal or Business)
     return (
-        <button onClick={onNext} className="flex flex-col justify-end min-h-screen text-left">
+        <button onClick={onNext} className="flex flex-col justify-end min-h-screen text-left w-full">
             <div className="px-16 text-white-5">
                 <h1 className="font-ambroise font-demi text-7_5xl">Select your account</h1>
                 <h2 className="font-thin text-2xl pt-2">that fits your needs.</h2>
