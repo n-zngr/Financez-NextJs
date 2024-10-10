@@ -1,6 +1,12 @@
 # Financez
 Rebuilding a financing-app project with NextJs, originally created using NodeJs and EJS [Financez](https://github.com/DeltaGamingCH/FINANCEZ).
 
+## Project Details
+- NextJs <img src="https://skillicons.dev/icons?i=nextjs"/>
+- Typescript <img src="https://skillicons.dev/icons?i=ts"/>
+- Tailwind <img src="https://skillicons.dev/icons?i=tailwind"/>
+- MongoDB <img src="https://skillicons.dev/icons?i=mongodb"/>
+
 ## Documentation
 Documentation of the project is not public, found on Notion. 
 
