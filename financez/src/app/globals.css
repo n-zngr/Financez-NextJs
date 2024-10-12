@@ -25,7 +25,7 @@ body {
     cursor: none !important;
   }
 
-  button, a{
+  button, a, input, label{
     cursor: none !important;
   }
 }
