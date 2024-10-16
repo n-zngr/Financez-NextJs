@@ -10,18 +10,21 @@ import Onboarding3 from '@/app/onboarding/Onboarding-3';
 import Onboarding4 from '@/app/onboarding/Onboarding-4';
 import Onboarding5 from '@/app/onboarding/Onboarding-5';
 import Onboarding6 from '@/app/onboarding/Onboarding-6';
+import AccountPlans from './plans/AccountPlans';
 
 export interface OnboardingProps {
     onNext: () => void;
+    setSelectedPlan?: (plan: 'Standard' | 'Prestige') => void;
 }
 
 const OnboardingLogic = () => {
     const [ currentPage, setCurrentPage ] = useState(1);
+    const [selectedPlan, setSelectedPlan] = useState<'Standard' | 'Prestige' | null>(null);
 
     const router = useRouter();
 
     const nextPage = () => {
-        if (currentPage < 5) {
+        if (currentPage < 4) {
             setCurrentPage(currentPage + 1);
         } else {
             router.push('/dashboard');
@@ -63,10 +66,10 @@ const OnboardingLogic = () => {
                 <Onboarding4 onNext={nextPage}/>
             </div>
             <div className={`absolute inset-0 transition-transform duration-600 ease-in-out ${currentPage === 3 ? 'translate-x-0' : currentPage < 3 ? 'translate-x-full' : '-translate-x-full'}`}>
-                <Onboarding5 onNext={nextPage}/>
+                <Onboarding5 onNext={nextPage} setSelectedPlan={setSelectedPlan}/>
             </div>
             <div className={`absolute inset-0 transition-transform duration-600 ease-in-out ${currentPage === 4 ? 'translate-x-0' : currentPage < 4 ? 'translate-x-full' : '-translate-x-full'}`}>
-                <Onboarding6 onNext={nextPage}/>
+                <Onboarding6 onNext={nextPage} selectedPlan={selectedPlan || 'Standard'}/>
             </div>
         </div>
     );

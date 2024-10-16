@@ -61,3 +61,10 @@ input{
 .rotate-y-180 {
   transform: rotateY(180deg);
 }
+
+/*Number input Spinners*/
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

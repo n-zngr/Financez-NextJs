@@ -3,17 +3,19 @@ import { OnboardingProps } from '../OnboardingLogic';
 
 type PlanType = 'Standard' | 'Prestige' | 'Nothing';
 
-const Plans: FC<OnboardingProps> = ({ onNext }) => {
-    const [selectedPlan, setSelectedPlan] = useState<PlanType>('Nothing');
+const AccountPlans: FC<OnboardingProps> = ({ onNext, setSelectedPlan }) => {
+    const [selectedPlan, setLocalSelectedPlan] = useState<PlanType>('Nothing');
 
-    
     const handleSelectPlan = (plan: PlanType) => {
-        setSelectedPlan(plan);
+        setLocalSelectedPlan(plan);
     };
     
     const handleContinue = () => {
-        if (selectedPlan) {
+        if (selectedPlan && selectedPlan !== 'Nothing') {
             console.log(`Selected Plan: ${selectedPlan}`);
+            if (setSelectedPlan) {
+                setSelectedPlan(selectedPlan);
+            }
             onNext();
         }
     };
@@ -68,4 +70,4 @@ const Plans: FC<OnboardingProps> = ({ onNext }) => {
     );
 };
 
-export default Plans;
+export default AccountPlans;

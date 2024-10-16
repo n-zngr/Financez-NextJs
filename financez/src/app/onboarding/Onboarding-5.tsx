@@ -1,12 +1,12 @@
 import React, { FC } from 'react';
 import { OnboardingProps } from '@/components/OnboardingLogic';
-import Plans from '@/components/Plans/Plans';
+import AccountPlans from '@/components/plans/AccountPlans';
 
-const Onboarding5: FC<OnboardingProps> = ({ onNext }) => {
+const Onboarding5: FC<OnboardingProps> = ({ onNext, setSelectedPlan }) => {
     // Select your plan (Standard, Prestige)
     return (
         <div className='flex flex-col justify-end min-h-screen w-full'>
-            <Plans onNext={onNext}/>
+            <AccountPlans onNext={onNext} setSelectedPlan={setSelectedPlan}/>
             <div className='px-16 text-white-5'>
                 <h1 className='font-ambroise font-demi text-7_5xl'>Select your plan</h1>
                 <h2 className='font-thin text-2xl pt-2'>and unleash the full potential of your finances.</h2>
