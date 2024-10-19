@@ -37,27 +37,27 @@ const AccountPlans: FC<OnboardingProps> = ({ onNext, setSelectedPlan }) => {
             <div className='w-full h-full flex flex-row gap-16 p-16'>
                 <div className='flex flex-col gap-4 w-1/2'>
                     {/*Standard Plan*/}
-                    <div className={`flex flex-col border rounded-xl p-4 border-white-5 text-white-5 ${selectedPlan === 'Standard' ? 'border-2' : 'border'}`} onClick={() => handleSelectPlan('Standard')}>
-                        <div className='flex flex-row justify-between border-white-5 text-white-5'>
+                    <div className={`flex flex-col border rounded-xl border-white-5 p-4 transition-all duration-400 ${selectedPlan === 'Standard' ? 'bg-white-5 text-black-1' : 'text-white-5'}`} onClick={() => handleSelectPlan('Standard')}>
+                        <div className='flex flex-row justify-between'>
                             <h3 className='font-ambroise font-extrabold text-3xl pb-4'>Standard</h3>
                             <p className='font-medium'>FREE</p>
                         </div>
                         <div className='flex'>
-                            <p className=''>Experience Financez.</p>
+                            <p>Experience Financez.</p>
                         </div>
                     </div>
                     {/*Prestige Plan*/}
-                    <div className={`flex flex-col border-gold-3 rounded-xl p-4 text-gold-3 ${selectedPlan === 'Prestige' ? 'border-2' : 'border'}`} onClick={() => handleSelectPlan('Prestige')}>
+                    <div className={`flex flex-col border rounded-xl border-gold-3 p-4 transition-all duration-400 ${selectedPlan === 'Prestige' ? 'bg-gold-3 text-black-1' : 'text-gold-3'}`} onClick={() => handleSelectPlan('Prestige')}>
                         <div className='flex flex-row justify-between'>
                             <h3 className='font-ambroise font-extrabold text-3xl pb-4'>Prestige</h3>
                             <p className='font-medium'>CHF 3.95</p>
                         </div>
                         <div className='flex'>
-                            <p className=''>Additional features, support the development.</p>
+                            <p>Additional features, support the development.</p>
                         </div>
                     </div>
                     {/*Continue Button*/}
-                    <button className={`flex border rounded-xl p-3 transition-all duration-200 border-white-1 text-white-1 disabled:border-gray-5 disabled:text-gray-5`} onClick={handleContinue} disabled={selectedPlan === 'Nothing'}>
+                    <button className={`flex border rounded-xl p-3 mt-4 transition-all duration-200 border-white-5 text-white-5 disabled:border-gray-5 disabled:text-gray-5`} onClick={handleContinue} disabled={selectedPlan === 'Nothing'}>
                         <p className='text-left'>Continue</p>
                     </button>
                 </div>

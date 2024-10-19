@@ -11,6 +11,7 @@ import Onboarding4 from '@/app/onboarding/Onboarding-4';
 import Onboarding5 from '@/app/onboarding/Onboarding-5';
 import Onboarding6 from '@/app/onboarding/Onboarding-6';
 import AccountPlans from './plans/AccountPlans';
+import LoginLink from './login/LoginLink';
 
 export interface OnboardingProps {
     onNext: () => void;
@@ -44,9 +45,7 @@ const OnboardingLogic = () => {
                     <div className={`w-[96px] h-[2px] rounded transition-all duration-400 ${currentPage === 4 ? 'bg-white-5' : 'bg-gray-5'}`}></div>
                     <div className={`w-[96px] h-[2px] rounded transition-all duration-400 ${currentPage === 5 ? 'bg-white-5' : 'bg-gray-5'}`}></div>
                 </div>
-                <div>
-                    <a className='text-white-5 font-light' href='/login'>LOGIN</a>
-                </div>
+                <LoginLink/>
             </nav>
             {/*Onboarding Pages*/}
             <div className={`absolute inset-0 transition-transform duration-600 ease-in-out ${currentPage === 1 ? 'translate-x-0' : '-translate-x-full'}`}>
